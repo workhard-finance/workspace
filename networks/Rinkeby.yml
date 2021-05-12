@@ -1,0 +1,16 @@
+version: "3"
+
+tasks:
+  deploy:
+    preconditions:
+      - sh: test -f ../.env
+        msg: "Please create .env on workspace root directory."
+    dir: ../protocol
+    cmds:
+      - echo "hello"
+
+  # develop:
+  #   deps:
+  #     - task: compile
+  #     - task: deploy
+  #     - task: copy-dev-env

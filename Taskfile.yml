@@ -1,0 +1,26 @@
+version: "3"
+
+dotenv: [".env"]
+
+tasks:
+  pull:
+    - git submodule update --init --recursive
+
+  install:
+    - cd protocol && yarn
+    - cd frontend-v1 && yarn
+
+  app:
+    dir: frontend-v1
+    cmds:
+      - yarn {{.CLI_ARGS}}
+
+  contract:
+    dir: protocol
+    cmds:
+      - yarn {{.CLI_ARGS}}
+
+includes:
+  localhost: ./networks/Local.yml
+  rinkeby: ./networks/Rinkeby.yml
+  mainnet: ./networks/Mainnet.yml

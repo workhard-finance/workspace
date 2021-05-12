@@ -1,0 +1,22 @@
+version: "3"
+
+tasks:
+  node:
+    dir: protocol
+    cmds:
+      - yarn hardhat node --hostname 0.0.0.0
+  deploy:
+    dir: protocol
+    cmds:
+      - rm -f deployed.dev.json
+      - yarn localhost run scripts/deploy.ts
+      - yarn localhost run scripts/demo/1-*.ts
+      - yarn localhost run scripts/demo/2-*.ts
+      - yarn localhost run scripts/demo/3-*.ts
+      - yarn localhost run scripts/demo/4-*.ts
+
+  # develop:
+  #   deps:
+  #     - task: compile
+  #     - task: deploy
+  #     - task: copy-dev-env

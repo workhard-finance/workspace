@@ -1,16 +1,14 @@
 {
   "folders": [
     {
-      "path": "../protocol",
-      "name": "contracts"
-    },
-    {
-      "path": "../frontend-v1",
-      "name": "app"
-    },
-    {
       "path": ".",
       "name": "workspace"
+    },
+    {
+      "path": "frontend-v1"
+    },
+    {
+      "path": "protocol"
     }
   ],
   "settings": {
