@@ -1,0 +1,6 @@
+[submodule "protocol"]
+	path = protocol
+	url = https://github.com/workhard-finance/protocol
+[submodule "frontend-v1"]
+	path = frontend-v1
+	url = https://github.com/workhard-finance/frontend-v1
