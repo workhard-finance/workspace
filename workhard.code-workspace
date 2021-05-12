@@ -1,0 +1,15 @@
+{
+  "folders": [
+	{
+		"path": "../protocol"
+	},
+	{
+		"path": "../frontend-v1"
+	}
+],
+  "settings": {
+    "solidity.compileUsingRemoteVersion": "v0.7.6+commit.7338295f",
+    "solidity.packageDefaultDependenciesContractsDirectory": "",
+    "solidity.packageDefaultDependenciesDirectory": "node_modules"
+  }
+}
