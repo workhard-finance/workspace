@@ -1,15 +1,31 @@
 {
   "folders": [
-	{
-		"path": "../protocol"
-	},
-	{
-		"path": "../frontend-v1"
-	}
-],
+    {
+      "path": "../protocol",
+      "name": "contracts"
+    },
+    {
+      "path": "../frontend-v1",
+      "name": "app"
+    },
+    {
+      "path": ".",
+      "name": "workspace"
+    }
+  ],
   "settings": {
     "solidity.compileUsingRemoteVersion": "v0.7.6+commit.7338295f",
     "solidity.packageDefaultDependenciesContractsDirectory": "",
-    "solidity.packageDefaultDependenciesDirectory": "node_modules"
+    "solidity.packageDefaultDependenciesDirectory": "contracts/node_modules",
+    "files.exclude": {
+      "protocol": true,
+      "frontend-v1": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-vscode.vscode-typescript-tslint-plugin",
+      "juanblanco.solidity"
+    ]
   }
 }
