@@ -10,6 +10,17 @@ tasks:
     - cd protocol && yarn
     - cd frontend-v1 && yarn
 
+  develop:
+    deps: [run-testnode, deploy-and-start]
+    cmds:
+      - echo "Closed!"
+
+  # ↓ helper scripts
+
+  run-testnode: task localhost:node
+
+  deploy-and-start: task localhost:deploy && task frontend -- start
+
   frontend:
     dir: frontend-v1
     cmds:
@@ -19,12 +30,6 @@ tasks:
     dir: protocol
     cmds:
       - yarn {{.CLI_ARGS}}
-
-  develop:
-    cmds:
-      - task localhost:node &
-      - task localhost:deploy
-      - task frontend -- start
 
 includes:
   localhost: ./networks/Localhost.yml

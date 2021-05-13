@@ -13,9 +13,6 @@ tasks:
 
   deploy:
     dir: protocol
-    preconditions:
-      - sh: test -f ../.env
-        msg: "Please create .env on workspace root directory."
     deps: [compile]
     cmds:
       - rm -f deployed.dev.json
