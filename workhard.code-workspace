@@ -14,7 +14,7 @@
   "settings": {
     "solidity.compileUsingRemoteVersion": "v0.7.6+commit.7338295f",
     "solidity.packageDefaultDependenciesContractsDirectory": "",
-    "solidity.packageDefaultDependenciesDirectory": "contracts/node_modules",
+    "solidity.packageDefaultDependenciesDirectory": "protocol/node_modules",
     "files.exclude": {
       "protocol": true,
       "frontend-v1": true
