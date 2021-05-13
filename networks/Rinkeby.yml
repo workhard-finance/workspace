@@ -1,16 +1,18 @@
 version: "3"
 
 tasks:
+  compile:
+    dir: protocol
+    cmds:
+      - yarn compile
+
   deploy:
+    dir: protocol
     preconditions:
       - sh: test -f ../.env
         msg: "Please create .env on workspace root directory."
-    dir: ../protocol
+    deps: [compile]
     cmds:
-      - echo "hello"
-
-  # develop:
-  #   deps:
-  #     - task: compile
-  #     - task: deploy
-  #     - task: copy-dev-env
+      - yarn rinkeby run scripts/deploy.ts
+      - cp deployed.json ../frontend-v1/src/deployed.dev.json
+      - echo "Deployed. Don't forget to publish the package to npm"

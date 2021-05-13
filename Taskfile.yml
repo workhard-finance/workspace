@@ -10,17 +10,23 @@ tasks:
     - cd protocol && yarn
     - cd frontend-v1 && yarn
 
-  app:
+  frontend:
     dir: frontend-v1
     cmds:
       - yarn {{.CLI_ARGS}}
 
-  contract:
+  protocol:
     dir: protocol
     cmds:
       - yarn {{.CLI_ARGS}}
 
+  develop:
+    cmds:
+      - task localhost:node &
+      - task localhost:deploy
+      - task frontend -- start
+
 includes:
-  localhost: ./networks/Local.yml
+  localhost: ./networks/Localhost.yml
   rinkeby: ./networks/Rinkeby.yml
   mainnet: ./networks/Mainnet.yml

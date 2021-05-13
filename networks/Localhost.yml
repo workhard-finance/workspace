@@ -1,0 +1,24 @@
+version: "3"
+
+tasks:
+  compile:
+    dir: protocol
+    cmds:
+      - yarn compile
+
+  node:
+    dir: protocol
+    cmds:
+      - yarn hardhat node --hostname 0.0.0.0
+
+  deploy:
+    dir: protocol
+    preconditions:
+      - sh: test -f ../.env
+        msg: "Please create .env on workspace root directory."
+    deps: [compile]
+    cmds:
+      - rm -f deployed.dev.json
+      - yarn localhost run scripts/deploy.ts
+      - cp deployed.dev.json ../frontend-v1/src/
+      - yarn localhost run scripts/demo/main.ts
