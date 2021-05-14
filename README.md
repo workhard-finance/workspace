@@ -29,6 +29,12 @@ sudo snap install task --classic
     task install
     ```
 
+## Test protocol
+
+```.shell
+task test
+```
+
 ## Run
 
 a) You can simply start dev server by running

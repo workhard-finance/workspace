@@ -15,6 +15,11 @@ tasks:
     cmds:
       - echo "Closed!"
 
+  test:
+    dir: protocol
+    cmds:
+      - yarn test
+
   # ↓ helper scripts
 
   run-testnode: task localhost:node
