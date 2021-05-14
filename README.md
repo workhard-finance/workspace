@@ -57,7 +57,7 @@ b) Or if you want to see the log output separately, prepare 3 terminal windows(o
 1. Run frontend
     ```.shell
     # terminal 3
-    task frontend
+    task frontend -- start
     ```
 
 ## Develop
