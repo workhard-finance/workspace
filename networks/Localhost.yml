@@ -18,4 +18,4 @@ tasks:
       - rm -f deployed.dev.json
       - yarn localhost run scripts/deploy.ts
       - cp deployed.dev.json ../frontend-v1/src/
-      - yarn localhost run scripts/demo/main.ts
+      - yarn localhost run scripts/demo/all.ts
