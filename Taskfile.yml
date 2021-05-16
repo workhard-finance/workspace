@@ -37,6 +37,6 @@ tasks:
       - yarn {{.CLI_ARGS}}
 
 includes:
-  localhost: ./networks/Localhost.yml
-  rinkeby: ./networks/Rinkeby.yml
-  mainnet: ./networks/Mainnet.yml
+  localhost: ./tasks/Localhost.yml
+  rinkeby: ./tasks/Rinkeby.yml
+  mainnet: ./tasks/Mainnet.yml
