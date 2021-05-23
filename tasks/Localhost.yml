@@ -1,7 +1,7 @@
 version: "3"
 
 tasks:
-  compile:
+  build:
     dir: protocol
     cmds:
       - yarn build
@@ -13,7 +13,7 @@ tasks:
 
   deploy:
     dir: protocol
-    deps: [compile]
+    deps: [build]
     cmds:
       - rm -f deployed.dev.json
       - yarn localhost run scripts/deploy.ts
