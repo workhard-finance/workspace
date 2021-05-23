@@ -4,7 +4,7 @@ tasks:
   compile:
     dir: protocol
     cmds:
-      - yarn compile
+      - yarn build
 
   deploy:
     dir: protocol
