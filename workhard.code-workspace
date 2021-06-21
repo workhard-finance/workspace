@@ -18,7 +18,10 @@
     "files.exclude": {
       "protocol": true,
       "frontend-v1": true
-    }
+    },
+    "cSpell.words": [
+      "workhard"
+    ]
   },
   "extensions": {
     "recommendations": [
